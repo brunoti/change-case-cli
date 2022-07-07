@@ -10,10 +10,10 @@ Tips: 1 - Result string is copied to your clipboard automatically.
 Usage
 
 To convert case,
-    $ case-cli input --case=[option]
+    $ change-case input --case=[option]
 
 To set default case,
-    $ case-cli set [option]
+    $ change-case set [option]
 
 Possible options
 
@@ -31,15 +31,15 @@ sentence         /    String case utility for converting
 
 Examples
 
-case-cli hello, world! --case=snake
+change-case hello, world! --case=snake
 > hello_world
 
-case-cli --case=pascal hello, world!
+change-case --case=pascal hello, world!
 > HelloWorld
 
-case-cli -c=snake hello, world!
+change-case -c=snake hello, world!
 > hello_world
 
-case-cli -c=s hello, world!
+change-case -c=s hello, world!
 > hello_world
 `

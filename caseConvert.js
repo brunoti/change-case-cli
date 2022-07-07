@@ -2,13 +2,11 @@
 import chalk from 'chalk'
 import Case from 'case'
 import Conf from 'conf'
-import logSymbols from 'log-symbols'
-import clipboardy from './clipboardyAdapter.js'
 import helpString from './help.js'
 
 const config = new Conf({
-  projectName: 'case-cli',
-  configName: 'case-cli',
+  projectName: 'change-case',
+  configName: 'change-case',
   clearInvalidConfig: true
 })
 
@@ -17,17 +15,8 @@ export default (type, srcs) => {
 
   let src = srcs.join(' ')
 
-  if (!src) {
-    try {
-      src = clipboardy.readSync()
-    } catch (err) {
-      console.error(`${logSymbols.error} ${err.message}`)
-      process.exit(1)
-    }
-  }
-
   const writeLog = (applyColor) => (log) => {
-    console.log(applyColor(`${logSymbols.success} ${log}`))
+    console.log(log)
     printResult = log
   }
 
